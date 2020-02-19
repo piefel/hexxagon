@@ -20,8 +20,8 @@
  */
 
 
-#include "board.h"
 #include "move.h"
+#include "board.h"
 
 #include <sys/timeb.h>
 #include <stdlib.h>

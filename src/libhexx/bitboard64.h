@@ -25,6 +25,7 @@
 
 #include <netinet/in.h>
 #include <iostream>
+#include <cstdio>
 
 namespace libhexx 
 {
@@ -52,7 +53,7 @@ namespace libhexx
 
         void printInHex()
         {
-            printf("0x%X, 0x%X\n", lowbits, highbits);
+            std::printf("0x%X, 0x%X\n", lowbits, highbits);
         };
         
         friend std::ostream& operator<<(std::ostream &output, const class BitBoard64 &b);
@@ -62,6 +63,9 @@ namespace libhexx
 		
 		uint32_t lowbits, highbits;
 	};
+
+    std::ostream& operator<<(std::ostream &output, const class BitBoard64 &b);
+	std::istream& operator>>(std::istream &input, class BitBoard64 &b);
 }
 
 #endif

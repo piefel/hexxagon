@@ -138,8 +138,8 @@ void GtkHexxagonBoard::draw()
             posx += width  * offset / 2;
             posy += height * offset / 2;
 
-            int x = (int) round(posx) + xoff;
-            int y = (int) round(posy) + yoff;
+            int nx = (int) round(posx) + xoff;
+            int ny = (int) round(posy) + yoff;
 
             int type;
             LookUp lookup(bbMask);
@@ -173,10 +173,10 @@ void GtkHexxagonBoard::draw()
 
             Glib::RefPtr<Gdk::GC> gc = Gdk::GC::create(back);
             gc->set_clip_mask(mask[type]);
-            gc->set_clip_origin(x, y);
+            gc->set_clip_origin(nx, ny);
 
             if(back && map_board[type])
-                back->draw_drawable(gc, map_board[type], 0, 0, x, y, -1, -1);
+                back->draw_drawable(gc, map_board[type], 0, 0, nx, ny, -1, -1);
 
             cellNo++;
         }
@@ -224,12 +224,12 @@ int GtkHexxagonBoard::getCellFromPos(int inx, int iny)
             posx += width  * offset / 2;
             posy += height * offset / 2;
             
-            int x = (int) round(posx + w / 2) + xoff;
-            int y = (int) round(posy + h / 2) + yoff;
+            int nx = (int) round(posx + w / 2) + xoff;
+            int ny = (int) round(posy + h / 2) + yoff;
         
             // Now we got the place for cell cellNo
-            double dx = inx - x;
-            double dy = iny - y;
+            double dx = inx - nx;
+            double dy = iny - ny;
             double a = (w/2)*(w/2);
             double b  = (h/2)*(h/2);
             

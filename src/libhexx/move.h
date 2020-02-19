@@ -20,8 +20,8 @@
  */
 
 
-#ifndef _MOVE_H
-#define _MOVE_H
+#ifndef _HEXXAGONMOVE_H
+#define _HEXXAGONMOVE_H
 
 #include "board.h"
 
