@@ -1,0 +1,67 @@
+----- Licence -------------------------------------------------------------
+
+Hexxagon board game.
+Copyright (C) 2001 Erik Jonsson.
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+
+
+
+----- About Hexxagon ------------------------------------------------------
+
+The latest version of Hexxagon can be downloaded from: 
+http://www.nesqi.se/hexxagon/
+
+And you can reach me on this email:
+hexxagon@nesqi.se
+
+
+
+----- Compile / Install ---------------------------------------------------
+
+Since it's hard enough to maintain the GTK front end I have discontinued 
+the readline front end. If you want to play the game in text mode you will 
+have to download the older version 3.3:
+
+http://www.nesqi.se/hexxagon/download/hexxagon-0.3.3.tar.gz
+
+To compile this source package you have to have these libraries installed:
+
+gtk+ v2.4  - Which can be downloaded from http://www.gtk.org/download/
+
+gtkmm v2.4 - This is a C++ wrapper for GTK+ 2. You can download gtkmm
+             from http://www.gtkmm.org/.
+
+If you are using debian you have to install the "-dev" packages as well
+as the library packages.
+
+If you have these libraries installed with there corresponding header files
+the rest of the installation should be easy.
+
+If the configure script can't find libgtkmm or libgtk+ you should try to add 
+there locations to the environment variable PKG_CONFIG_PATH separeted by
+colons. You can read more about this in the pkg-config man page.
+
+*** Install:
+
+First run ./configure to prepare for compilation. This stage will tell you
+if some libraries are missing.
+
+Then run make to compile the program.
+
+And finally install hexxagon by changing user to root with "su" or "sudo"
+and run "make install".
+
+This is it. Have fun!

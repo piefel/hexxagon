@@ -1,0 +1,2 @@
+SUBDIRS = libhexx gui 
+
